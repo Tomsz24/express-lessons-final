@@ -1,5 +1,6 @@
 const express = require('express');
 const hbs = require('express-handlebars');
+const {clientRouter} = require('./routers/client');
 
 
 const app = express();
@@ -15,9 +16,7 @@ app.engine('.hbs', hbs.engine({
 }));
 app.set('view engine', '.hbs');
 
-app.get('/', (req, res) => {
-  res.render('test');
-});
+app.use('/client', clientRouter);
 
 app.listen(3000, 'localhost', () => {
   console.log('LISTENING ON PORT 3000')
