@@ -8,4 +8,4 @@ clientRouter.get('/', (req, res) => {
 
 module.exports = {
   clientRouter,
-}
+};
