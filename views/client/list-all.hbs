@@ -27,6 +27,9 @@
       </td>
       <td>
         <a href="/client/{{this.id}}">szczegoly</a>
+        <form method="POST" action="/client/{{this.id}}?_method=DELETE">
+          <button type="submit">Usun !</button>
+        </form>
       </td>
     </tr>
   {{/each}}

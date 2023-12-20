@@ -26,7 +26,8 @@ clientRouter
   })
 
   .delete('/:id', (req, res) => {
-    res.send('usun');
+    db.delete(req.params.id);
+    res.render('client/delete');
   });
 
 module.exports = {
