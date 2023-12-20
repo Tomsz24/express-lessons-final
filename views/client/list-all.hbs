@@ -1,0 +1,34 @@
+<h2>Lista klientow</h2>
+<table>
+  <thead>
+  <tr>
+    <th>
+      E-mail
+    </th>
+    <th>
+      Imię
+    </th>
+    <th>
+      Data nastepnego kontaktu
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each clients}}
+    <tr>
+      <th>
+        <a href="mailto:{{this.email}}" target="_blank">{{this.email}}</a>
+      </th>
+      <td>
+        <a href="/client/{{this.id}}">{{this.name}}</a>
+      </td>
+      <td>
+        {{this.nextContactAt}}
+      </td>
+      <td>
+        <a href="/client/{{this.id}}">szczegoly</a>
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

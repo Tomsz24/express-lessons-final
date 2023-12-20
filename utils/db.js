@@ -12,6 +12,10 @@ class Db {
     this._data = JSON.parse(await readFile(this.dbFileName, 'utf8'));
   }
 
+  _save() {
+    writeFile(this.dbFileName, JSON.stringify(this._data), 'utf8');
+  }
+
   create(obj) {
     this._data.push({
       id: uuid(),
@@ -24,6 +28,10 @@ class Db {
     return this._data;
   }
 
+  getOne(id) {
+    return this._data.find((item) => item.id === id);
+  }
+
   update(id, newObj) {
     const index = this._data.findIndex((item) => item.id === id);
     if (index !== -1) {
@@ -31,13 +39,13 @@ class Db {
         ...this._data[index],
         ...newObj,
       };
-      writeFile(this.dbFileName, JSON.stringify(this._data), 'utf8');
+      this._save();
     }
   }
 
   delete(id) {
     this._data = this._data.filter((item) => item.id !== id);
-    writeFile(this.dbFileName, JSON.stringify(this._data), 'utf8');
+    this._save(); // debounce
   }
 }
 
