@@ -17,11 +17,14 @@ class Db {
   }
 
   create(obj) {
+    const id = uuid();
     this._data.push({
-      id: uuid(),
+      id,
       ...obj,
     });
-    writeFile(this.dbFileName, JSON.stringify(this._data), 'utf8');
+    this._save();
+
+    return id;
   }
 
   getAll() {

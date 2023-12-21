@@ -1,0 +1,44 @@
+<h1>siema z add</h1>
+<form method="POST" action="/client">
+  <label>
+    <p>
+      E-mail:
+    </p>
+    <p>
+      <input type="email" name="email">
+    </p>
+  </label>
+
+  <label>
+    <p>
+      Imie:
+    </p>
+    <p>
+      <input type="text" name="name">
+    </p>
+  </label>
+
+  <label>
+    <p>
+      Data nastepnego kontaktu:
+    </p>
+    <p>
+      <input type="date" name="nextContactAt">
+    </p>
+  </label>
+
+  <label>
+    <p>
+      E-mail:
+    </p>
+    <p>
+      <textarea name="notes"></textarea>
+    </p>
+  </label>
+
+  <p>
+    <button type="submit">Zapisz</button>
+  </p>
+</form>
+
+{{> go-to-clients }}
