@@ -1,1 +1,16 @@
-[{"id":"ea0c937d-a16b-4e27-b597-5c9a13d18749","name":"NewName","email":"new@new.pl","phone":123456789,"notes":"dzwonic poznym popoludniem","nextContactAt":"2024-01-03"},{"id":"0a572bae-68c6-4d23-9ae2-6df6be953e44","name":"Test123","email":"email@example.com","notes":"","nextContactAt":"Jutro"},{"id":"f2fbbfe0-b309-4d6f-aac2-2f94a5246ca3","name":"Test123","email":"email@example.com","notes":"","nextContactAt":"Dzisiaj"},{"id":"05c5b6df-5c52-4838-8a84-2f1d4d320822","email":"test@email.pl","name":"Ziemowit","nextContactAt":"2024-05-03","notes":"Zadzwonic po 15"}]
+[
+  {
+    "id": "44273041-cb47-4be3-9b06-7e3710820783",
+    "name": "Zenus",
+    "email": "zenek@zenek.pl",
+    "notes": "Ziomeczek mowi bardzo niewyraznie",
+    "nextContactAt": "2023-12-24"
+  },
+  {
+    "id": "384b671e-7647-4fd4-833d-a79c7ac9a818",
+    "name": "Stefan",
+    "email": "stefan@stefan.pl",
+    "notes": "W sumie nic o nim nie wiadomo",
+    "nextContactAt": ""
+  }
+]
